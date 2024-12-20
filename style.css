@@ -1,0 +1,136 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #fff;
+    height: 100%;
+    background: #000;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.intro-text-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 99;
+}
+
+.intro-text {
+    background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    font-size: 128px;
+    font-family: "Source Sans Pro", sans-serif;
+    -webkit-animation: reveal 6000ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
+    animation: reveal 6000ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
+}
+
+@-webkit-keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+        opacity: 1;
+    }
+
+    100% {
+        background-size: 300% 300%;
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+        opacity: 1;
+    }
+
+    100% {
+        background-size: 300% 300%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #ffffff20;
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #ffffff20;
+        opacity: 1;
+    }
+}
+
+.intro{
+    display: none;
+    position: relative;
+    background: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXBwczM3d3drZTFxOWlrNWl6dzBxc3l4Mzltc2Q3bDFmYW1jMW1nZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ftfVpeWsm95QgGfOZ8/giphy.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.intro::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #000000cc;
+    animation: fade 6000ms ease ;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: .5;
+    animation: easep 3000ms ease;
+}
+
+@keyframes fade {
+    0%{
+        
+        background: #000000;
+    }
+ 
+    100%{
+     
+        background: #000000cc;
+    }
+}
+@keyframes easep {
+    0%{
+        opacity: 0;
+    }
+ 
+    100%{
+        opacity: .5;
+    }
+}
+
+@media screen and (max-width:650px){
+    .intro-text{
+        font-size: 48px;
+        text-align: center;
+    }
+}
