@@ -15,24 +15,31 @@ body {
 }
 
 .intro-text-container{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     z-index: 99;
+    
 }
 
 .intro-text {
+    display: none;
     background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     opacity: 0;
-    font-size: 128px;
-    font-family: "Source Sans Pro", sans-serif;
+    font-size: 64px;
+    font-family: "Cinzel", serif;
+    font-weight: 500;
     -webkit-animation: reveal 6000ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
     animation: reveal 6000ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
+    
 }
 
 @-webkit-keyframes reveal {
@@ -61,20 +68,20 @@ body {
 
 @-webkit-keyframes glow {
     40% {
-        text-shadow: 0 0 8px #ffffff20;
+        text-shadow: 0 0 150px #ffffff00;
         opacity: 1;
     }
 }
 
 @keyframes glow {
     40% {
-        text-shadow: 0 0 8px #ffffff20;
+        text-shadow: 0 0 150px #ffffff00;
         opacity: 1;
     }
 }
 
 .intro{
-    display: none;
+    
     position: relative;
     background: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXBwczM3d3drZTFxOWlrNWl6dzBxc3l4Mzltc2Q3bDFmYW1jMW1nZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ftfVpeWsm95QgGfOZ8/giphy.webp);
     background-size: cover;
@@ -82,6 +89,7 @@ body {
     background-position: center;
     width: 100vw;
     height: 100vh;
+    transition: 3000ms ease all;
 }
 
 .intro::before{
@@ -92,8 +100,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: #000000cc;
-    animation: fade 6000ms ease ;
+    background: #000000b9;
+    animation: fade 1000ms ease ;
 }
 
 #particles-js {
@@ -103,8 +111,9 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2;
-    opacity: .5;
-    animation: easep 3000ms ease;
+    opacity: 1;
+    animation: easep 1000ms ease;
+    transition: 3000ms ease all;
 }
 
 @keyframes fade {
@@ -115,7 +124,7 @@ body {
  
     100%{
      
-        background: #000000cc;
+        background: #000000b9;
     }
 }
 @keyframes easep {

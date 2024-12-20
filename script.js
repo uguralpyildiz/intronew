@@ -1,3 +1,16 @@
+
+    // Intro elementlerini yönetmek için zamanlayıcı
+    const intro = document.querySelector(".intro-text");
+    setTimeout(() => {intro.style.display = "block"; }, 4000);
+    const particles = document.querySelector("#particles-js");
+    setTimeout(() => {particles.style.opacity = "0"; }, 4000);
+    const introSmoke = document.querySelector(".intro");
+    setTimeout(() => {introSmoke.style.opacity = "0"; }, 4000);
+
+    
+
+
+
 particlesJS("particles-js", {
     "particles": {
         "number": {
